@@ -9,11 +9,15 @@ require('geckodriver');
 
 //describe block
 describe("Registering a User", function () {
+
     let driver
+    
     let fName = "Tim";
     let lName = "Tester";
     let email = "timtester@outlook.com";
     let password = "TestPass123";
+
+
     //Launching Browser and Opening Webpage
     this.beforeEach(async function (){
         driver = await new Builder().forBrowser('chrome').build();

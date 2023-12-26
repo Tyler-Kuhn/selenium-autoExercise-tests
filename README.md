@@ -11,8 +11,8 @@ This project contains a suite of automated tests for the website [Automation Exe
 ## Installation
 
 ### Clone the Repository:
-git clone <repository-url>
-cd <repository-name>
+git clone git@github.com:Tyler-Kuhn/selenium-autoExercise-tests.git
+cd selenium-autoExercise-tests
 
 ### Install Dependencies:
 npm install
@@ -25,7 +25,7 @@ This command will run all the tests using Mocha with Mochawesome reporter integr
 
 ### View Test Results:
 - Test results are displayed in the terminal.
-- Mochawesome generates a more detailed HTML report. After the test run, you can find the report in the `mochawesome-report` folder.
+- Mochawesome generates a more detailed HTML report. After the test run, you can find the report in the `testReport` folder.
 
 ## Mochawesome Report
 

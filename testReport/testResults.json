@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-26T02:57:18.645Z",
+    "end": "2023-12-26T02:57:49.911Z",
+    "duration": 31266,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d83b9d58-3e3a-4bdc-8efc-8f59ba3456ed",
+      "title": "",
+      "fullFile": "C:\\Users\\tyler\\Projects\\selenium-js\\test\\firstTest.js",
+      "file": "\\test\\firstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "18964757-8376-4891-b831-c5ba48145d7c",
+          "title": "Registering a User",
+          "fullFile": "C:\\Users\\tyler\\Projects\\selenium-js\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Registering a User\"",
+              "fullTitle": "Registering a User \"before each\" hook in \"Registering a User\"",
+              "timedOut": null,
+              "duration": 8484,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('firefox').build();\nawait driver.get('https://automationexercise.com/');",
+              "err": {},
+              "uuid": "62e6a535-33a3-41fd-9015-cae07986e186",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Registering a User\"",
+              "fullTitle": "Registering a User \"after each\" hook in \"Registering a User\"",
+              "timedOut": null,
+              "duration": 1510,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "0bfeef59-c8c9-40ec-b055-10f8a4dbc1ae",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Should Navigate to url 'http://automationexercise.com'",
+              "fullTitle": "Registering a User Should Navigate to url 'http://automationexercise.com'",
+              "timedOut": null,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let title = await driver.getTitle();\ntitle.should.equal('Automation Exercise');",
+              "err": {},
+              "uuid": "f00633e1-8a29-4764-808c-8c837eac377c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Navigate to New User Signup Page",
+              "fullTitle": "Registering a User Should Navigate to New User Signup Page",
+              "timedOut": null,
+              "duration": 2014,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.css('a[href=\"/login\"]')).click();\nlet heading = await driver.findElement(By.css('#form > div > div > div:nth-child(3) > div > h2')).getText();\nexpect(heading).to.include('New User Signup!');",
+              "err": {},
+              "uuid": "a09cf2aa-17b2-4271-b5a2-943b2f5fe1d3",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should fill in the name and email",
+              "fullTitle": "Registering a User Should fill in the name and email",
+              "timedOut": null,
+              "duration": 1208,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.css('a[href=\"/login\"]')).click();",
+              "err": {},
+              "uuid": "81897bf7-11d2-4ae5-a5b0-acf276ddd940",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f00633e1-8a29-4764-808c-8c837eac377c",
+            "a09cf2aa-17b2-4271-b5a2-943b2f5fe1d3",
+            "81897bf7-11d2-4ae5-a5b0-acf276ddd940"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "testResults",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:/Users/tyler/Projects/selenium-js/testReport",
+        "reportFilename": "testResults"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -10,9 +10,13 @@ require('geckodriver');
 //describe block
 describe("Registering a User", function () {
     let driver
+    let fName = "Tim";
+    let lName = "Tester";
+    let email = "timtester@outlook.com";
+    let password = "TestPass123";
     //Launching Browser and Opening Webpage
     this.beforeEach(async function (){
-        driver = await new Builder().forBrowser('firefox').build();
+        driver = await new Builder().forBrowser('chrome').build();
         await driver.get('https://automationexercise.com/');
     });
     //Closing Browser
@@ -34,6 +38,15 @@ describe("Registering a User", function () {
 
     it("Should fill in the name and email", async function(){
         await driver.findElement(By.css('a[href="/login"]')).click();
-
-    })
+        const signupName = await driver.findElement(By.css('input[data-qa="signup-name"'));
+        const signupEmail = await driver.findElement(By.css('input[data-qa="signup-email"'));
+        await signupName.sendKeys(fName);
+        await signupEmail.sendKeys(email);
+        const actualName = await signupName.getAttribute('value');
+        const expectedName = fName;
+        const actualEmail = await signupEmail.getAttribute('value');
+        const expectedEmail = email;
+        expect(actualName).to.equal(expectedName);
+        expect(actualEmail).to.equal(expectedEmail);
+    });
 })

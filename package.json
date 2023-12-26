@@ -4,7 +4,7 @@
   "description": "selenium practice",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register --reporter-option reportDir=C:/Users/tyler/Projects/selenium-js/testReport,reportFilename=testResults"
+    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register --reporter-option reportDir=C:/Users/LENOVO/projects/selenium-autoExercise-tests/testReport,reportFilename=testResults"
   },
   "author": "",
   "license": "ISC",
